@@ -1,18 +1,10 @@
 import { Fragment, useState, useEffect } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
-
-const destinaitons = [
-    { name: 'Casablanca' },
-    { name: 'Marrakech' },
-    { name: 'Agadir' },
-    { name: 'Tangier' },
-    { name: 'Rabat' },
-    { name: 'Fes' },
-]
+import { destinations } from '../../constants'
 
 export default function Ticketbuy({ setParData, defaultIndex }) {
-    const [selected, setSelected] = useState(destinaitons[defaultIndex ? defaultIndex : 0])
+    const [selected, setSelected] = useState(destinations[defaultIndex ? defaultIndex : 0])
     const [query, setQuery] = useState('')
 
     useEffect(() => {
@@ -23,8 +15,8 @@ export default function Ticketbuy({ setParData, defaultIndex }) {
 
     const filteredPeople =
         query === ''
-            ? destinaitons
-            : destinaitons.filter((person) =>
+            ? destinations
+            : destinations.filter((person) =>
                 person.name
                     .toLowerCase()
                     .replace(/\s+/g, '')

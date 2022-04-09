@@ -1,10 +1,8 @@
 import mysql from "serverless-mysql"
 const db = mysql({
   config: {
-    host: 'localhost',
-    port: "3306",
-    user: 'root',
-    
+    host: "localhost",
+    user: "root",
     database: "bus_app"
   }
 })

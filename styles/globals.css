@@ -1,0 +1,54 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+
+:root {
+  --primary-dark: #f33333;
+  --primary-light: #ff7738;
+}
+
+@layer base {
+  li {
+    @apply p-4;
+  }
+  button {
+    @apply p-3  hover:bg-white border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md;
+  }
+}
+
+.seat {
+  height: 28px !important;
+  width: 28px !important;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(2) !important;
+  margin: 20px !important;
+}
+
+.seat--selected {
+  background-color: var(--primary-light) !important;
+}
+
+.seat--enabled {
+  background-color: var(--primary-dark) !important;
+}

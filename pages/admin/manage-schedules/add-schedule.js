@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import AdminLayout from 'adminLayout'
 import { destinations } from '../../../constants'
 import { useRouter } from 'next/router'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const detailData = [
   ["Pickup", "src"],

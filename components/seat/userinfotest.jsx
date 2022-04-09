@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react'
 import { useRouter } from 'next/router';
 import PaymentComponent from 'components/paymentcomponent';
+import { useAppContext } from 'context';
 
 const Userinfotest = () => {
+  const { adminLoggedIn } = useAppContext();
   const router = useRouter();
   const formRef = useRef(null);
 
@@ -116,8 +118,11 @@ const Userinfotest = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 py-3 mt-4 bg-gray-50 text-right sm:px-6">
-                    <PaymentComponent handleConfirmTicket={handleConfirmTicket} />
+                  <div className="px-4 py-3 mt-4 bg-gray-50 text-right sm:px-6">{adminLoggedIn ? <div>
+                    <button type='button' className="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" onClick={() => {
+                      handleConfirmTicket("admin");
+                    }}>Confirm as Admin</button>
+                  </div> : <PaymentComponent handleConfirmTicket={handleConfirmTicket} />}
                   </div>
                 </div>
               </htmlForm>

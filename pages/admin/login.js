@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useAppContext } from '../../context'
 import { useRouter } from 'next/router'
 import AdminLayout from 'adminLayout'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function LoginFormAdmin() {
   const [email, setEmail] = useState('')

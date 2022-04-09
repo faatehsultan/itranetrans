@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import React, { useEffect } from 'react'
 import { useAppContext } from '../context'
 import { useRouter } from 'next/router';

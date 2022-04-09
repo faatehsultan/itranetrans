@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AdminLayout from 'adminLayout'
-import Link from 'next/link';
+import Link from 'next/link'; import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const detailData = [
   ["ID", "id"],
